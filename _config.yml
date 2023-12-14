@@ -1,12 +1,10 @@
 ### Site Settings ###
-title               : portfolYOU
+title               : Ishani Narwankar
 description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
-baseurl             : "ishaninarwankar"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+                      Hi.
+baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : ishani-narwankar/ishaninarwankar.github.io    # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme        : YoussefRaafatNasry/portfolYOU
+remote_theme        : ishani-narwankar/portfolio
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 
@@ -20,13 +18,13 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - documentation/partials/**                           # For Documentation Only
+#  - documentation/partials/**                           # For Documentation Only
 
 
 ### Author Info ###
 author:
   name              : Ishani Narwankar
-  image             : https://i.imgur.com/uyDNQnn.jpg
+  image             : 
 #  behance           : your_username
 # dribbble          : your_username
   email             : ishaninarwankar2024@u.northwestern.edu
@@ -73,14 +71,14 @@ analytics:
     tracking_id: your-google-tracking-id
 
 
-### Buy me a coffee ###
-# See https://www.buymeacoffee.com/
-buymeacoffee:
-  enabled: false
-  username: your_username
-  color: "#007bff"
-  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
-  description: "Support me on Buy me a coffee!"
+# ### Buy me a coffee ###
+# # See https://www.buymeacoffee.com/
+# buymeacoffee:
+#   enabled: false
+#   username: your_username
+#   color: "#007bff"
+#   message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+#   description: "Support me on Buy me a coffee!"
 
 
 ### Defaults for collections ###
