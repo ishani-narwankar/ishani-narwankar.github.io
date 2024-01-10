@@ -11,6 +11,8 @@ description: ROS2 package and services allowing Franka Emika arm to facilitate a
 ### **Full Demo Video**
 The following video showcases a full runthrough of our project. In it, we demonstrate the robot's ability to calibrate and determine the position of the board, run through the game setup sequence while using force control, and interact with the player and receive both single letter and full word guesses.
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Q81Vcnj9kqs/0.jpg)](https://www.youtube.com/watch?v=Q81Vcnj9kqs)
+
 <br>
 <br>
 
@@ -93,7 +95,15 @@ The following two videos closely demonstrate the OCR system and how player guess
 Single letter guess:
 
 
+https://github.com/ishani-narwankar/ishani-narwankar.github.io/assets/42013894/ec27aa51-53c6-486a-ab76-354bd8da277f
+
+
+
 Full word guess:
+
+
+https://github.com/ishani-narwankar/ishani-narwankar.github.io/assets/42013894/c19bd22f-539f-4213-b512-7c2ee1d56710
+
 
 
 <br>
