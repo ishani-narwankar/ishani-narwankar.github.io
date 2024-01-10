@@ -95,14 +95,14 @@ The following two videos closely demonstrate the OCR system and how player guess
 Single letter guess:
 
 
-https://github.com/ishani-narwankar/ishani-narwankar.github.io/assets/42013894/ec27aa51-53c6-486a-ab76-354bd8da277f
+<video src="../assets/hm_single_letter.mp4" controls title="Single Letter Guess:"></video>
 
 
 
 Full word guess:
 
 
-https://github.com/ishani-narwankar/ishani-narwankar.github.io/assets/42013894/c19bd22f-539f-4213-b512-7c2ee1d56710
+<video src="../assets/hm_full_word.mp4" controls title="Full Word Guess:"></video>
 
 
 
