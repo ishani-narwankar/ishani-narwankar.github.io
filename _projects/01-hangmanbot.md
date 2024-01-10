@@ -8,11 +8,9 @@ description: ROS2 package and services allowing Franka Emika arm to facilitate a
 # Hangman Game Robot with Franka Emika Robot Arm
 <br>
 
-<a href="https://github.com/ishani-narwankar/hangman-with-franka">Hangmanbot GitHub Repository</a>
-
 ### **Full Demo Video**
 The following video showcases a full runthrough of our project. In it, we demonstrate the robot's ability to calibrate and determine the position of the board, run through the game setup sequence while using force control, and interact with the player and receive both single letter and full word guesses.
-https://ishani-narwankar.github.io/assets/hm_fulldemo.mp4
+
 <br>
 <br>
 
@@ -93,7 +91,10 @@ Our final stretch goal that we would love to improve our project with is changin
 The following two videos closely demonstrate the OCR system and how player guesses are seen by the robot. 
 
 Single letter guess:
-https://ishani-narwankar.github.io/assets/hm_single_letter.mp4
+
 
 Full word guess:
-https://ishani-narwankar.github.io/assets/hm_full_word.mp4
+
+
+<br>
+<a href="https://github.com/ishani-narwankar/hangman-with-franka">Hangmanbot GitHub Repository</a>
