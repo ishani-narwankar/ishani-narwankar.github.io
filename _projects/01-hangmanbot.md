@@ -1,98 +1,57 @@
 ---
-name: Hangman Game Robot
+name: Hangman Game with Robot Arm
 tools: [Python, ROS2, OpenCV, Embedded Systems, CAD]
 image: https://ishani-narwankar.github.io/assets/hangman_franka.gif
 description: ROS2 package and services allowing Franka Emika arm to facilitate a game of hangman with a human player.
 ---
 
-# Hangman Game Robot with Franka Emika Robot Arm
+# Hangman Game with Franka Emika Robot Arm
 <br>
 
-### **Full Demo Video**
-The following video showcases a full runthrough of our project. In it, we demonstrate the robot's ability to calibrate and determine the position of the board, run through the game setup sequence while using force control, and interact with the player and receive both single letter and full word guesses.
+### **Project Brief**
+The main goal of this project was to use the Franka Emika robot arm as a facilitator for a game of hangman. My team and I developed a ROS2 package to implement force control for writing, utilize april tags for a more dynamic gameplay, and apply object character recognition to interact with the human player. 
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Q81Vcnj9kqs/0.jpg)](https://www.youtube.com/watch?v=Q81Vcnj9kqs)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tPG9MygONDw?si=8R5erDGjVC5_ZGkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<br>
-<br>
-
-### **Description**
-The goal of this project was to use the Franka robot as a facilitator for a game of hangman. 
-
-We developed a force control system combined with the use of april tags to regulate the pen's distance from the board as well as an Intel RealSense Camera to interact with the human player.
-
-In this project, my main focus was developing the game setup sequence to calibrate the franka's position with respect to the board and then begin drawing the dashes for the gameplay using force control.
-
-Group Members: Ishani Narwankar, Ananya Agarwal, Graham Clifford, Abhishek Sankar, Srikanth Schelbert
 <br>
 <br>
 
-### **Overall System Architecture**
-The following diagram illustrates the overall system design:
-
-![Alt text](../assets/hm_node_diagram.jpg)
-
-### **Quickstart Guide**
-1. Install PaddlePaddle using `python -m pip install paddlepaddle-gpu -i https://pypi.tuna.tsinghua.edu.cn/simple`
-2. Install paddleocr using `pip install "paddleocr>=2.0.1" # Recommend to use version 2.0.1+`
-3. Install Imutils using `pip install imutils`
-4. SSH into the student@station computer from the terminal after you are connected to the robot via ethernet cable.
-5. On your browser open https://panda0.robot, unlock the robot, and activate FCI
-6. Once the robot is unlocked and has a blue light, use `ros2 launch drawing game_time.launch.xml` to open RVIZ and start the hangman game on the robot.
+### **Subsystems**
+- Franka Emika Robot Arm: The arm was controlled using the ROS2 MoveIt API. Realistic writing technique were implemented using force control methods. 
+- Gameplay: The backend ROS2 organization and implementation of all of the subsystems allowed the Franka robot to keep track of and change states during the hangman game.
+- Computer Vision: An Intel RealSense D435 Camera was used for all computer vision. April Tags were used for calibrating the arm's position with respect to the whiteboard. This allows for a more dynamic gameplay (ie the whiteboard could be moved between player turns and the game could still continue). An object character recognition algorithm was trained to allow players to write letter or full-word guesses.
 <br>
 <br>
 
-### **List of Nodes**
-1. Brain: 
-
-    Interfaces with all other nodes to evaulate data.
-2. ImageModification: 
-    
-    Modifies images for OCR using opencv.
-
-3. Paddle_Ocr:
-
-    Performs OCR and publishes predictions.
-
-4. Hangman: 
-
-    Plays the hangman game based on the OCR user input.
-
-5. Drawing:
-
-    Plan and execute robot paths using force control.
-
-    Accept requests to plan trajectories for the franka robot, and subsequently send them to another node to be executed. Additionally,calculate the estimated force at the end-effector, and publish it on a topic.
-
-6. TrajectoryExecution: 
-
-    Execute trajectories planned for the franka robot.
-
-    Execute trajectories planned for the franka robot at 10hz. This is a stand in for the MoveIT execute trajectory action, since MoveIT doesn't allow us to cancel goals. When a trajectory is planned by either the MoveGroup motion planner or the compute_cartesian_path service, the result is returned in the form of a RobotTrajectory message. This message includes a JointTrajectory message, which contains a list of JointTrajectoryPoint messages. We must break up this list into individual JointTrajectory messages, with just one element in the JointTrajectoryPoint list. This way, we can execute the origina RobotTrajectory discreetly by publishing JointTrajectories on the /panda_arm_controller/joint_trajectory topic.
-
-7. Kickstart:
-
-    Kickstart handles setting up the board for the hangman game.This includes calibrating the robot to the board, drawing the 5 lines for the word to guess, drawing the 5 lines for the 5 wrong guesses, and drawing the stand for the hangman.
-
-8. Tags:
-
-    This node deals with the april tags and handels tf tree. It publishes a static transform between camera and the robot, takes the arm to a specified pose and looks at the april tags on the board and publishes a board to robot transform, and gives the start pose of any letter with respect to the panda_link0.
+### **System Flow**
+- **Calibration:** Franka moved to detect April Tags on whiteboard and create transforms to determine whiteboard position and orientation with respect to the robot.
+- **Game Setup:** ROS2 service set up to call MoveIt actions in order to draw dashes for the 6-letter randomly generated word, additional dashes for the 6 letter guesses, and the hangman tree stand.
+- **Player Interaction:** Franka moved towards player in order to use Intel RealSense Camera to detect player's guess written on a personal whiteboard.
+- **Franka Response:** Arm utilizes force control to determine end-effector distance from board and write or draw necessary component for gameplay.
+- **Endgame:** The game continues until the player guesses the right word or until they use up their 6 wrong guesses.
 <br>
 <br>
 
-### **Future Work**
-Although our team redesigned a spring force control adapter for the Franka gripper for our fallback goal, we quickly outgrew the need for it as we began trying to implement force control. However, our project could still be significantly improved on the force control side of things. By the demo day, our team had achieved using force control to draw characters on the board but could have improved the quality of writing with more time to tune the force control parameters.
+### **Personal Work**
+Personal work on this project includes:
+- Creating and implementing ROS2 service for Game Setup
+- Designing and manufacturing mounts needed for Franka Emika arm interaction with pen (a spring-loaded pen holder was designed and 3D printed as a fallback goal for the force control)
+- Organizing team dashboard to integrate team member work and keep track of completed tasks
+<br>
+<br>
 
-Along with improving force control, our team envisioned incorporating an extra part of the game where the robot picks up different colored pens depending on whether the player's guess is right or wrong. Due to the amount of people on our team, we actually designed and manufactured the pen stand and began writing the code to implement this part of our project. We had finalized our gripper code and had begun calibrating the robot to our april tag on the pen stand. We unfortunately ran out of time incorporating this into our final gameplay.  
+### **Background Information**
+This work was developed as a group project from Northwestern University's **ME 495: Embedded Systems in Robotics class**. The goal of the class was to learn and implement ROS2 (Robotic Operating System).
 
-Our final stretch goal that we would love to improve our project with is changing the board position between the player's turns. Due to our use of april tags and force control this could have been implemented with additional time to properly calibrate the camera's exact position with respect to the board and robot.
+**Group Members: Ishani Narwankar, Ananya Agarwal, Graham Clifford, Abhishek Sankar, Srikanth Schelbert**
+
 <br>
 <br>
 
 ### **Additional Videos**
-The following two videos closely demonstrate the OCR system and how player guesses are seen by the robot. 
-
-Single letter guess:
+The following two videos closely demonstrate the OCR system and how player guesses are seen by the robot.
+<br>
+<br>
 
 
 <video src="../assets/hm_single_letter.mp4" controls title="Single Letter Guess:"></video>
