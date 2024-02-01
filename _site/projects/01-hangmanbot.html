@@ -21,11 +21,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Hangman Game Robot">
+  <meta property="og:title" content="Hangman Game with Robot Arm">
   <meta property="og:description" content="ROS2 package and services allowing Franka Emika arm to facilitate a game of hangman with a human player.">
-  <meta property="og:image" content="https://www.sketchappsources.com/resources/source-image/project-neon-groove-music-ui.png">
+  <meta property="og:image" content="https://ishani-narwankar.github.io/assets/hangman_franka.gif">
 
-  <title>Hangman Game Robot</title>
+  <title>Hangman Game with Robot Arm</title>
   <meta name="description" content="ROS2 package and services allowing Franka Emika arm to facilitate a game of hangman with a human player.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -60,7 +60,9 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/on_deck/02-youbot"></a>
+
+      <a class="nav-item nav-link active" href="/projects/">Projects</a>
 
       <a class="nav-item nav-link " href="/about/">About</a>
 
@@ -72,7 +74,70 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  
+  <h1 id="hangman-game-with-franka-emika-robot-arm">Hangman Game with Franka Emika Robot Arm</h1>
+<p><br /></p>
+
+<h3 id="project-brief"><strong>Project Brief</strong></h3>
+<p>The main goal of this project was to use the Franka Emika robot arm as a facilitator for a game of hangman. My team and I developed a ROS2 package to implement force control for writing, utilize april tags for a more dynamic gameplay, and apply object character recognition to interact with the human player. 
+<br />
+<br /></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tPG9MygONDw?si=8R5erDGjVC5_ZGkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<br />
+<br />
+
+### **Subsystems**
+- Franka Emika Robot Arm: The arm was controlled using the ROS2 MoveIt API. Realistic writing technique were implemented using force control methods. 
+- Gameplay: The backend ROS2 organization and implementation of all of the subsystems allowed the Franka robot to keep track of and change states during the hangman game.
+- Computer Vision: An Intel RealSense D435 Camera was used for all computer vision. April Tags were used for calibrating the arm's position with respect to the whiteboard. This allows for a more dynamic gameplay (ie the whiteboard could be moved between player turns and the game could still continue). An object character recognition algorithm was trained to allow players to write letter or full-word guesses.
+<br />
+<br />
+
+### **System Flow**
+- **Calibration:** Franka moved to detect April Tags on whiteboard and create transforms to determine whiteboard position and orientation with respect to the robot.
+- **Game Setup:** ROS2 service set up to call MoveIt actions in order to draw dashes for the 6-letter randomly generated word, additional dashes for the 6 letter guesses, and the hangman tree stand.
+- **Player Interaction:** Franka moved towards player in order to use Intel RealSense Camera to detect player's guess written on a personal whiteboard.
+- **Franka Response:** Arm utilizes force control to determine end-effector distance from board and write or draw necessary component for gameplay.
+- **Endgame:** The game continues until the player guesses the right word or until they use up their 6 wrong guesses.
+<br />
+<br />
+
+### **Personal Work**
+Personal work on this project includes:
+- Creating and implementing ROS2 service for Game Setup
+- Designing and manufacturing mounts needed for Franka Emika arm interaction with pen (a spring-loaded pen holder was designed and 3D printed as a fallback goal for the force control)
+- Organizing team dashboard to integrate team member work and keep track of completed tasks
+<br />
+<br />
+
+### **Background Information**
+This work was developed as a group project from Northwestern University's **ME 495: Embedded Systems in Robotics class**. The goal of the class was to learn and implement ROS2 (Robotic Operating System).
+
+**Group Members: Ishani Narwankar, Ananya Agarwal, Graham Clifford, Abhishek Sankar, Srikanth Schelbert**
+
+<br />
+<br />
+
+### **Additional Videos**
+The following two videos closely demonstrate the OCR system and how player guesses are seen by the robot.
+<br />
+<br />
+
+
+<video src="../assets/hm_single_letter.mp4" controls="" title="Single Letter Guess:"></video>
+
+
+
+Full word guess:
+
+
+<video src="../assets/hm_full_word.mp4" controls="" title="Full Word Guess:"></video>
+
+
+
+<br />
+<a href="https://github.com/ishani-narwankar/hangman-with-franka">Hangmanbot GitHub Repository</a>
+</center>
 
 </div>
   </main>
@@ -93,7 +158,7 @@
        onMouseOver="this.style.color='#333333'"
        onMouseOut="this.style.color='#6c757d'">
       <i class="fab fa-github fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.linkedin.com/in//ishani-narwankar"
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/ishani-narwankar"
        style="color: #6c757d"
        onMouseOver="this.style.color='#007bb5'"
        onMouseOut="this.style.color='#6c757d'">
