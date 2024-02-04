@@ -50,21 +50,10 @@ This work was developed as a group project from Northwestern University's **ME 4
 <br>
 
 ### **Additional Videos**
-The following two videos closely demonstrate the OCR system and how player guesses are seen by the robot.
+The following two video closely demonstrate the OCR system and how player guesses are seen by the robot.
 <br>
 <br>
 
-
-<video src="../assets/hm_single_letter.mp4" controls title="Single Letter Guess:"></video>
-
+<center><video src="../assets/letter_detect.mp4" controls title="Title"></video></center>
 
 
-Full word guess:
-
-
-<video src="../assets/hm_full_word.mp4" controls title="Full Word Guess:"></video>
-
-
-
-<br>
-<a href="https://github.com/ishani-narwankar/hangman-with-franka">Hangmanbot GitHub Repository</a>
