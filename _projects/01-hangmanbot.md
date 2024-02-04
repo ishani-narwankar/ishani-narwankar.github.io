@@ -54,6 +54,10 @@ The following two video closely demonstrate the OCR system and how player guesse
 <br>
 <br>
 
-<center><video src="../assets/letter_detect.mp4" controls title="Title"></video></center>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/gl3gn3ExsOk?si=ZHSLtWjuO7s_itOb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+
+<p class="text-center">
+{% include elements/button.html link="https://github.com/ishani-narwankar/hangman-with-franka" text="GitHub" %}
+</p>
 
 
