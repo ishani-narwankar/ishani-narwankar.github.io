@@ -11,6 +11,7 @@ description: ROS2 package and services allowing Franka Emika arm to facilitate a
 ### **Project Brief**
 The main goal of this project was to use the Franka Emika robot arm as a facilitator for a game of hangman. My team and I developed a ROS2 package to implement force control for writing, utilize april tags for a more dynamic gameplay, and apply object character recognition to interact with the human 
 player. 
+
 <br>
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/tPG9MygONDw?si=8R5erDGjVC5_ZGkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
