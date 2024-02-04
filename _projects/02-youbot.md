@@ -2,7 +2,7 @@
 name: Kuka youBot Mobile Manipulator 
 tools: [Python, CoppeliaSim, Kinematics, Motion Planning, Path Planning, Trajectory Generation]
 image: https://ishani-narwankar.github.io/assets/portfolio_kuka.gif
-description: insert info here
+description: Control algorithm to pick and place a cube with a Kuka youBot simulated in Coppeliasim.
 ---
 # Kuka youBot Mobile Manipulator
 <br>
@@ -12,8 +12,8 @@ The main goal of this project was to write software that plans a trajectory for 
 <br>
 <br>
 
-### **Demo**
-[add videos here]
+### **Best PID Control Demo**
+![youBot_pick_n_place](https://ishani-narwankar.github.io/assets/Best_run_cropped.mp4)
 
 <br>
 <br>
@@ -54,6 +54,3 @@ The following cases were tested to prove the usability and reliability of the tr
 3. **New Task**
 <br>
 <br>
-
-### **Background Information**
-This work was developed as a group project from Northwestern University's **ME 495: Embedded Systems in Robotics class**. The goal of the class was to learn and implement ROS2 (Robotic Operating System).
