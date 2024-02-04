@@ -13,7 +13,6 @@ The main goal of this project was to use the Franka Emika robot arm as a facilit
 player. 
 
 <br>
-<br>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/tPG9MygONDw?si=8R5erDGjVC5_ZGkQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
 <p class="text-center">
 {% include elements/button.html link="https://github.com/ishani-narwankar/hangman-with-franka" text="GitHub Repo" %}
