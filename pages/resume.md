@@ -11,8 +11,8 @@ weight: 2
     target="_blank"
     class="align-middle link-primary mr-2 mr-lg-0 ml-lg-2"
     href="/assets/IshaniNarwankar_Resume.pdf"
-    >Resume.pdf</a
-  >
+    >Download</a
+
 </li>
 <br>
 <object data="{{ site.url }}{{ site.baseurl }}/assets/IshaniNarwankar_Resume.pdf" width="1200" height="1200" type="application/pdf"></object>
