@@ -49,7 +49,7 @@ An ideal neutral buoyancy for the system is a slightly positive one.
 <img style="float: center;" src="../assets/new_float.jpg">
 <img style="float: right;" src="../assets/float.jpg"> -->
 <p align="center">
-      <img src="../assets/weights.jpg" align="left">
-      <img src="../assets/new_float.jpg">
-      <img src="../assets/float.jpg" align="right">
+      <img src="../assets/weights.jpg" align="left" style="height: 150px">
+      <img src="../assets/new_float.jpg" style="height: 150px">
+      <img src="../assets/float.jpg" align="right" style="height: 150px">
 </p>
