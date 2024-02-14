@@ -26,6 +26,7 @@ Hardware:
 
 Software:
 
+- Tune PID control of AUV
 - Create ROS2 package nemo_auv
 - Convert QGroundControl livestream to OpenCV video frames for use with RVIZ
 - Create control node for autonomous depth control
@@ -48,8 +49,33 @@ An ideal neutral buoyancy for the system is a slightly positive one.
 <!-- <img style="float: left;" src="../assets/weights.jpg">
 <img style="float: center;" src="../assets/new_float.jpg">
 <img style="float: right;" src="../assets/float.jpg"> -->
-<p align="center">
-      <img src="../assets/weights.jpg" align="left" style="height: 300px">
-      <img src="../assets/new_float.jpg" style="height: 300px">
-      <img src="../assets/float.jpg" align="right" style="height: 300px">
+<!-- <p align="center">
+      <img src="../assets/weights.jpg">
+      <img src="../assets/new_float.jpg">
+      <img src="../assets/float.jpg">
+</p> -->
+<!-- <p float="left">
+  <img src="../assets/weights.jpg" width="49%" />
+  
+  <img src="../assets/float.jpg" width="49%" />
+</p> -->
+<p float="center">
+  <img src="../assets/new_float.jpg" width="49%" />
 </p>
+
+### **Demo Videos of Progress**
+The following video showcases established manual drive and connection with QGroundControl.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sCT3qU0JJ18?si=rvHk0taONFOJ48xA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+The following video showcases the ros2 package created manual/autonomous depth mode which allows users to move around the AUV without having to manually maintain depth. This mode is used to capture rosbag data to input into ORBSLAM for map generation.
+
+<iframe
+ width="720"
+ height="576"
+ src="{{'https://youtube.com/embed/nIQ-ettAFkg?si=26ZnPv025zFOqHaE' . $video}}"
+ title="YouTube video player"
+ frameborder="0"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+ allowfullscreen>
+</iframe>
+

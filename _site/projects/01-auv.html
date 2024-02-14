@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)">
+  <meta property="og:description" content="ROS2 package that interfaces with ArduSub and PX4 to allow an AUV to autonomously navigate waypoints and avoid obstacles under water.">
+  <meta property="og:image" content="https://ishani-narwankar.github.io/assets/AUV.jpg">
+
+  <title>Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)</title>
+  <meta name="description" content="ROS2 package that interfaces with ArduSub and PX4 to allow an AUV to autonomously navigate waypoints and avoid obstacles under water.">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Ishani Narwankar</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects</a>
+
+      <a class="nav-item nav-link " href="/resume/">Resume</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="waypoint-navigation-and-obstacle-avoidance-with-autonomous-underwater-vehicle-auv">Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)</h1>
+<p><br /></p>
+
+<p><strong>THIS IS AN ONGOING INDEPENDENT PROJECT. THIS PAGE WILL CONTINUOUSLY BE UPDATED</strong>
+<br />
+<br /></p>
+
+<h3 id="project-brief"><strong>Project Brief</strong></h3>
+<p>The main goal of this project is to update a low-cost underwater vehicle and develop a ROS2 package that interfaces with ArduSub and PX4 to allow the AUV to autonomously navigate waypoints and avoid obstacles underwater.
+<br />
+<!-- project flow section here: map building -> digital waypoint -> waypoint navigation -> obstacle avoidance --></p>
+
+<h3 id="overall-project-flow"><strong>Overall Project Flow</strong></h3>
+<p><img src="../assets/AUV_flowchart.jpg" alt="project_flow" /></p>
+
+<h2 id="progress-so-far"><strong>Progress so far:</strong></h2>
+<p>Hardware:</p>
+<ul>
+  <li>Determine configuration for neutral buoyancy</li>
+  <li>Redesign, manufacture, and reconfigure hardware and electronics for AUV</li>
+</ul>
+
+<p>Software:</p>
+
+<ul>
+  <li>Tune PID control of AUV</li>
+  <li>Create ROS2 package nemo_auv</li>
+  <li>Convert QGroundControl livestream to OpenCV video frames for use with RVIZ</li>
+  <li>Create control node for autonomous depth control</li>
+</ul>
+
+<p>SLAM:</p>
+
+<ul>
+  <li>Utilize ORBSLAM2 to create map for AUV to localize itself for waypoint navigation</li>
+</ul>
+
+<h3 id="finding-neutral-buoyancy"><strong>Finding neutral buoyancy</strong></h3>
+<p>Determining the configuration to achieve physical neutral buoyancy is important for the robot so that the AUV does not sink to the bottom of the pool or immediately return to the surface of the water when it is stationary.</p>
+
+<p>The buoyancy of the AUV was altered with the addition of weights and pool noodles pieces (as shown below).</p>
+
+<p>An ideal neutral buoyancy for the system is a slightly positive one.</p>
+
+<!-- ![image alt ><](../assets/new_float.jpg) -->
+<!-- <img style="float: left;" src="../assets/weights.jpg">
+<img style="float: center;" src="../assets/new_float.jpg">
+<img style="float: right;" src="../assets/float.jpg"> -->
+<!-- <p align="center">
+      <img src="../assets/weights.jpg">
+      <img src="../assets/new_float.jpg">
+      <img src="../assets/float.jpg">
+</p> -->
+<!-- <p float="left">
+  <img src="../assets/weights.jpg" width="49%" />
+  
+  <img src="../assets/float.jpg" width="49%" />
+</p> -->
+<p float="center">
+  <img src="../assets/new_float.jpg" width="49%" />
+</p>
+
+<h3 id="demo-videos-of-progress"><strong>Demo Videos of Progress</strong></h3>
+<p>The following video showcases established manual drive and connection with QGroundControl.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sCT3qU0JJ18?si=rvHk0taONFOJ48xA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>The following video showcases the ros2 package created manual/autonomous depth mode which allows users to move around the AUV without having to manually maintain depth. This mode is used to capture rosbag data to input into ORBSLAM for map generation.</p>
+
+<iframe width="720" height="576" src="https://youtube.com/embed/nIQ-ettAFkg?si=26ZnPv025zFOqHaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Ishani Narwankar</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:ishaninarwankar2024@u.northwestern.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/ishani-narwankar"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/ishani-narwankar"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
