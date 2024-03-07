@@ -1,10 +1,10 @@
 ---
-name: Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)
+name: Underwater SLAM and Waypoint Navigation with Autonomous Underwater Vehicle (AUV)
 tools: [Python, ROS2, SLAM, CMake, Pixhawk, ArduSub, Path Planning, Controls]
 image: https://ishani-narwankar.github.io/assets/AUV.jpg
 description: ROS2 package that interfaces with ArduSub to allow an AUV to autonomously navigate waypoints and avoid obstacles under water.
 ---
-# Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)
+# Underwater SLAM and Waypoint Navigation with Autonomous Underwater Vehicle (AUV)
 <br>
 
 **THIS IS AN ONGOING INDEPENDENT PROJECT. THIS PAGE WILL CONTINUOUSLY BE UPDATED**
