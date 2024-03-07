@@ -2,7 +2,7 @@
 name: Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)
 tools: [Python, ROS2, SLAM, CMake, Pixhawk, ArduSub, Path Planning, Controls]
 image: https://ishani-narwankar.github.io/assets/AUV.jpg
-description: ROS2 package that interfaces with ArduSub and PX4 to allow an AUV to autonomously navigate waypoints and avoid obstacles under water.
+description: ROS2 package that interfaces with ArduSub to allow an AUV to autonomously navigate waypoints and avoid obstacles under water.
 ---
 # Waypoint Navigation and Obstacle Avoidance with Autonomous Underwater Vehicle (AUV)
 <br>
@@ -12,12 +12,12 @@ description: ROS2 package that interfaces with ArduSub and PX4 to allow an AUV t
 <br>
 
 ### **Project Brief**
-The main goal of this project is to update a low-cost underwater vehicle and develop a ROS2 package that interfaces with ArduSub and PX4 to allow the AUV to autonomously navigate waypoints and avoid obstacles underwater.
+The main goal of this project is to update a low-cost underwater vehicle and develop a ROS2 package that interfaces with ArduSub to allow the AUV to autonomously navigate waypoints and avoid obstacles underwater.
 <br>
 <!-- project flow section here: map building -> digital waypoint -> waypoint navigation -> obstacle avoidance -->
 
 ### **Overall Project Flow**
-![project_flow](../assets/AUV_flowchart.jpg)
+![project_flow](../assets/AUV_project_flow.png)
 
 ## **Progress so far:**
 Hardware:
@@ -51,6 +51,28 @@ An ideal neutral buoyancy for the system is a slightly positive one.
 <p float="center">
   <img src="../assets/new_float.jpg" width="49%" />
 </p>
+<br>
+
+### **Implementing ORBSLAM 2 (Orb Feature SLAM) Underwater**
+In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry. The available ROS package ORBSLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
+
+ORBSLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it on my system which uses ROS2 Iron.
+
+After porting ORBSLAM 2 into ROS2, my main task was tuning the ORB parameters and adjusting the package to work in an underwater environment.
+
+***Feature Detection in Pool Pre-camera Calibration***
+[will be added soon]
+
+***Good Camera Good Calibration Test***
+The purpose of this test was to isolate the issue with ORBSLAM initialization onboard the AUV
+[will be added soon]
+
+***Feature Detection in Pool Post-camera Calibration***
+[will be added soon]
+
+***Feature Detection in Pool with Underwater Environment and tuned ORB Parameters***
+[will be added soon]
+
 
 ### **Demo Videos of Progress**
 The following video showcases established manual drive and connection with QGroundControl.
