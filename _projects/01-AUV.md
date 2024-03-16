@@ -59,39 +59,25 @@ An ideal neutral buoyancy for the system is a slightly positive one.
 ### **Manual Control**
 The first step was establishing manual control which was done by setting up the low-level control settings of the AUV through QGroundControl. Manual control was important for map generation and tuning ORB SLAM 2 as it was used as a way to test Visual SLAM live. QGroundControl was also used to tune the PID gains used by the pixhawk controller. The following picture shows the livestream feed through QGroundControl:
 
-<!-- add pic here -->
-
+</center>
+<p float="center">
+  <img src="../assets/QGC.png" width="55%" />
+</p>
+<br>
 ### **Environment Design**
 Visual SLAM relies on edge and feature detection in an environment. As a result, when tuning the ORB SLAM 2 package to work in an underwater environment I faced the issue of noise being created by the tiles at the bottom of the pool and the lack of distinct features in the environment. The lack of features was discovered when testing the visual SLAM algorithm on the AUV in a feature-heavy environment outside of the water.
-
+<center>
 **Pool with underwater obstacles added**
+</center>
 <p float="center">
   <img src="../assets/underwaterenvironment.jpg" width="55%" />
 </p>
 <br>
 
-**Feature detection with vs. without added obstacles**
+<center>**Feature detection with vs. without added obstacles**
+
 ![featurevfeatureless](../assets/feature_featureless.gif)
-<!-- ## **Progress so far:**
-Hardware:
-- Determine configuration for neutral buoyancy
-- Redesign, manufacture, and reconfigure hardware and electronics for AUV
-
-Software:
-
-- Tune PID control of AUV
-- Create ROS2 package nemo_auv
-- Convert QGroundControl livestream to OpenCV video frames for use with RVIZ
-- Create control node for autonomous depth control
-
-SLAM:
-
-- Port ORBSLAM2 for use with ROS2 Iron
-- Calibrate monocular camera in air and in pool
-- Tune ORB params for better feature detection underwater
-- Design underwater environment for sufficient initialization of ORBSLAM2 underwater
-- Generate map of underwater environment with SLAM algorithm
-<br> -->
+</center>
 
 ### **Implementing ORBSLAM 2 (Orb Feature SLAM) Underwater**
 In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry. The available ROS package ORBSLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
