@@ -67,24 +67,19 @@ The first step was establishing manual control which was done by setting up the 
 ### **Environment Design**
 Visual SLAM relies on edge and feature detection in an environment. As a result, when tuning the ORB SLAM 2 package to work in an underwater environment I faced the issue of noise being created by the tiles at the bottom of the pool and the lack of distinct features in the environment. The lack of features was discovered when testing the visual SLAM algorithm on the AUV in a feature-heavy environment outside of the water.
 
-<p float="center">
-
-**Pool with underwater obstacles added**
-
-</p>
+<center><b>Pool with underwater obstacles added</b></center>
 
 <p float="center">
   <img src="../assets/underwaterenvironment.jpg" width="55%" />
 </p>
 <br>
 
+<center><b>Feature detection with vs. without added obstacles</b></center>
+
 <p float="center">
-
-**Feature detection with vs. without added obstacles**
-
-![featurevfeatureless](../assets/feature_featureless.gif)
-
+  <img src="../assets/feature_featureless.gif" width="55%" />
 </p>
+<br>
 
 
 ### **Implementing ORBSLAM 2 (Orb Feature SLAM) Underwater**
