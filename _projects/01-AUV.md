@@ -91,7 +91,6 @@ The left side of the above gif proves that for a system with a monocular camera,
 The right side of the above gif presents much less unwanted noise and more clear point/feature tracking during the initialization period. The map screen begins tracking the scene and the local points are visible as green dots on the obstacles in the environment. The map generation begins much more quickly and reliably as compared to in the environment without any added obstacles.
 
 <br>
-<br>
 
 ## **ROS Architecture**
 ### **Implementing ORBSLAM 2 (Orb Feature SLAM) Underwater**
