@@ -77,7 +77,7 @@ Visual SLAM relies on edge and feature detection in an environment. As a result,
 <center><b>Feature detection with vs. without added obstacles</b></center>
 
 <p float="center">
-  <img src="../assets/feature_featureless.gif" width="55%" />
+  <img src="../assets/feature_featureless.gif" width="100%" />
 </p>
 <br>
 
