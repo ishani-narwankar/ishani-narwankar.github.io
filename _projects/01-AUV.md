@@ -62,7 +62,7 @@ The buoyancy of the AUV was altered with the addition of weights and pool noodle
 The first step was establishing manual control which was done by setting up the low-level control settings of the AUV through QGroundControl. Manual control was important for map generation and tuning ORB SLAM 2 as it was used as a way to test Visual SLAM live. QGroundControl was also used to tune the PID gains used by the pixhawk controller. The following picture shows the livestream feed through QGroundControl:
 
 <p float="center">
-  <img src="../assets/QGC.png" width="55%" />
+  <img src="../assets/QGC.png" width="65%" />
 </p>
 <br>
 <br>
@@ -78,14 +78,14 @@ Visual SLAM relies on edge and feature detection in an environment. As a result,
 <center><b>Pool with underwater obstacles added</b></center>
 
 <p float="center">
-  <img src="../assets/underwaterenvironment.jpg" width="55%" />
+  <img src="../assets/underwaterenvironment.jpg" width="65%" />
 </p>
 <br>
 
 <center><b>Feature detection with vs. without added obstacles</b></center>
 
 <p float="center">
-  <img src="../assets/comparefeatures.gif" width="80%" />
+  <img src="../assets/comparefeatures.gif" width="100%" />
 </p>
 <br>
 <br>
@@ -98,14 +98,14 @@ ORB SLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it o
 
 <center><b>Camera Calibration in Air</b></center>
 <p float="center">
-  <img src="../assets/camcalibinair.png" width="65%" />
+  <img src="../assets/camcalibinair.png" width="85%" />
 </p>
 <br>
 
 
 <center><b>Camera Calibration Underwater</b></center>
 <p float="center">
-  <img src="../assets/camcalibinwater.png" width="65%" />
+  <img src="../assets/camcalibinwater.png" width="85%" />
 </p>
 <br>
 
