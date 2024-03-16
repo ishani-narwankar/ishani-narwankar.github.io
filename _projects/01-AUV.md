@@ -85,6 +85,11 @@ Visual SLAM relies on edge and feature detection in an environment. As a result,
 <p float="center">
   <img src="../assets/comparefeatures.gif" width="100%" />
 </p>
+
+The left side of the above gif proves that for a system with a monocular camera, a lack of many distinct features in the environment (especially underwater) will result in a prolonged initialization time or excess noise blocking initialization. Note that the map screen (the white window with the green box) does not initialize at all.
+
+The right side of the above gif presents much less unwanted noise and more clear point/feature tracking during the initialization period. The map screen begins tracking the scene and the local points are visible as green dots on the obstacles in the environment. The map generation begins much more quickly and reliably as compared to in the environment without any added obstacles.
+
 <br>
 <br>
 
