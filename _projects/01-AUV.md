@@ -10,7 +10,7 @@ description: ROS2 package that interfaces with ArduSub to allow an AUV to autono
 ![header_photo](../assets/nemo_header_photo.png)
 
 ## **Project Brief**
-In 10 weeks, I updated a low-cost underwater vehicle, ported an existing feature-based visual SLAM package into ROS2 Iron and tuning it for use in an underwater environment, and developed a ROS2 package that interfaces with ArduSub to autonomously navigate waypoints underwater.
+In 10 weeks, I updated a low-cost underwater vehicle, ported an existing feature-based visual SLAM package into ROS2 Iron, tuned it for use in an underwater environment, and developed a ROS2 package that interfaces with ArduSub to autonomously navigate waypoints underwater.
 
 The system was updated, tuned, and coded for use in a university pool. The ultimate purpose for this project was to develop a system that may be used for underwater mapping and directed search and inspection uses.
 
@@ -64,8 +64,6 @@ The first step was establishing manual control which was done by setting up the 
 <p float="center">
   <img src="../assets/QGC.png" width="65%" />
 </p>
-<br>
-<br>
 
 The following video showcases established manual drive and connection with QGroundControl.
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/sCT3qU0JJ18?si=rvHk0taONFOJ48xA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
