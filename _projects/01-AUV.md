@@ -17,11 +17,11 @@ The system was updated, tuned, and coded for use in a university pool. The ultim
 The following post outlines the different aspects of this project:
 - Hardware and Electronics
 - Manual Control
+- Environment Design
 - ROS Architecture
   - ORB SLAM 2 into ROS2
   - Testing and data collection
   - Control
-- Environment Design
 - Simulation
 - Future Work
 
@@ -39,6 +39,9 @@ The following are the upgrades I made to the physical system:
 - Replaced 3D-printed water-tight enclosures mounts to aluminum mounts
 - Redesigned and lasercut new top and bottom AUV plates (added new standoff mounting holes and dive reel mount)
 - Replaced and tuned motors for better manual control
+- Added servo-mounted monocular camera
+
+![hardware_upgrades](../assets/nemo_hardware_upgrades.png)
 
 #### **Finding neutral buoyancy:**
 Determining the configuration to achieve physical neutral buoyancy is important for the robot so that the AUV does not sink to the bottom of the pool or immediately return to the surface of the water when it is stationary.
@@ -53,6 +56,22 @@ An ideal neutral buoyancy for the system is a slightly positive one.
 </p>
 <br>
 
+### **Manual Control**
+The first step was establishing manual control which was done by setting up the low-level control settings of the AUV through QGroundControl. Manual control was important for map generation and tuning ORB SLAM 2 as it was used as a way to test Visual SLAM live. QGroundControl was also used to tune the PID gains used by the pixhawk controller. The following picture shows the livestream feed through QGroundControl:
+
+<!-- add pic here -->
+
+### **Environment Design**
+Visual SLAM relies on edge and feature detection in an environment. As a result, when tuning the ORB SLAM 2 package to work in an underwater environment I faced the issue of noise being created by the tiles at the bottom of the pool and the lack of distinct features in the environment. The lack of features was discovered when testing the visual SLAM algorithm on the AUV in a feature-heavy environment outside of the water.
+
+**Pool with underwater obstacles added**
+<p float="center">
+  <img src="../assets/underwaterenvironment.jpg" width="55%" />
+</p>
+<br>
+
+**Feature detection with vs. without added obstacles**
+![featurevfeatureless](../assets/feature_featureless.gif)
 <!-- ## **Progress so far:**
 Hardware:
 - Determine configuration for neutral buoyancy
@@ -77,7 +96,7 @@ SLAM:
 ### **Implementing ORBSLAM 2 (Orb Feature SLAM) Underwater**
 In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry. The available ROS package ORBSLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
 
-ORBSLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it on my system which uses ROS2 Iron.
+ORBSLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it on my system which uses ROS2 Iron. This required
 
 After porting ORBSLAM 2 into ROS2, my main task was tuning the ORB parameters and adjusting the package to work in an underwater environment.
 
@@ -94,9 +113,9 @@ The purpose of this test was to isolate the issue with ORBSLAM initialization on
 ***Feature Detection in Pool with Underwater Environment and tuned ORB Parameters***
 [will be added soon]
 
-### Acknowledgments
+### **Acknowledgments**
 The AUV project was my own individual project, but the following people helped me with taking behind-the-scenes photos/videos and setting up the underwater environment in Northwestern's Pool:
-Kyle Wang, Max Palay, Courtney Smith, Megan Black, Fiona Neylon, Kassidy Shedd. Thank you for your contributions.
+Kyle Wang, Max Palay, Courtney Smith, Megan Black, Fiona Neylon, Kassidy Shedd, and Stella Yu. Thank you for your contributions.
 
 ### **Additional Videos**
 The following video showcases established manual drive and connection with QGroundControl.
