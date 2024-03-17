@@ -93,10 +93,12 @@ The right side of the above gif presents much less unwanted noise and more clear
 <br>
 
 ## **ROS Architecture**
-### **Implementing ORBSLAM 2 (Orb Feature SLAM) Underwater**
-In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry and depth data. The available ROS package ORBSLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
+### **Implementing ORBSLAM 2 (Feature-based SLAM) Underwater**
+In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry and depth data. The available ROS package ORB SLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
 
-ORB SLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it on my system which uses ROS2 Iron. This required me to rewrite part of the ROS2 porting package for ORB SLAM. After porting the package into ROS2, my main task was tuning the ORB parameters and adjusting the package to work in an underwater environment.
+ORB SLAM 2 was developed for ROS1, so I ported it into ROS2 Iron to make it compatible with my system. This required me to rewrite part of the ROS2 porting package for ORB SLAM. After porting the package into ROS2, my main task was tuning the ORB parameters and adjusting the package to work in an underwater environment.
+
+The two main ways to tune the system for better underwater feature detection results is to calibrate the camera and tune the orb parameters. The pictures below display my camera calibration process while calibrating the AUV's camera in air and underwater. I utilized MATLAB's camera calibration app in order to visualize and minimize the reprojection errors amongst various calibration photos taken. I then converted the results of these calibrations into OpenCV calibration files for the ORB SLAM 2 package to utilize during run time.
 
 <center><b>Camera Calibration in Air</b></center>
 <p float="center">
@@ -111,11 +113,12 @@ ORB SLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it o
 </p>
 <br>
 
-[adding rest of section soon]
-<br>
-
 ### **Testing, Data Collection, and Loop Closures**
-[coming soon]
+Throughout the 10 weeks, I tuned, tested, and refined my AUV and methods during and after pool tests. Once I had established a way to launch and utilize ORB SLAM 2 with my created Nemo_AUV ROS2 package, I was able to complete one of the main goals of my project: generating a map of the underwater environment using SLAM.
+
+This is the process I repeated in order to sufficiently tune my packages to work reliably for underwater map generation:
+[diagram coming soon]
+
 <br>
 
 ### **Control**
@@ -133,7 +136,6 @@ ORB SLAM 2 was developed for ROS1, so I ported it into ROS2 in order to use it o
 ## **Acknowledgments**
 The AUV project was my own individual project, but the following people helped me with taking behind-the-scenes photos/videos and setting up the underwater environment in Northwestern's Pool:
 Kyle Wang, Max Palay, Courtney Smith, Megan Black, Fiona Neylon, Kassidy Shedd, and Stella Yu. Thank you for your contributions.
-
 <br>
 
 ## **Additional Videos**
