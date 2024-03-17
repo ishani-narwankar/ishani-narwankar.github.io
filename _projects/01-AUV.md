@@ -40,10 +40,10 @@ The following post outlines the different aspects of this project:
 For this project I inherited the underwater vehicle that James Oubre (MSR '23) built for his independent project. This vehicle was originally built for testing done in a lab water tank, so some hardware and electronics upgrades were necessary for reliable and effective use in a university pool.
 
 The following are the upgrades I made to the physical system:
-- Redesigned motor and weight mounts
-- Replaced 3D-printed water-tight enclosures mounts to aluminum mounts
-- Redesigned and lasercut new top and bottom AUV plates (added new standoff mounting holes and dive reel mount)
-- Replaced and tuned motors for better manual control
+- Improved design of motor and weight mounts
+- Upgraded 3D-printed water-tight enclosures mounts to aluminum mounts
+- Improved design of and lasercut new top and bottom AUV plates (added new standoff mounting holes and dive reel mount)
+- Upgraded and tuned motors for better manual control
 - Added servo-mounted monocular camera
 
 ![hardware_upgrades](../assets/nemo_hardware_upgrades.png)
@@ -140,9 +140,9 @@ This is the process I repeated in order to sufficiently tune my packages to work
 <br>
 
 ## **Future Work**
-Ultimately I didn't have enough time to test my autonomous waypoint navigation algorithm on the actual system, but was able to tune in with the maps generated and data collected during pool tests throughout the quarter. So my future work on this project includes:
 - Autonomous waypoint navigation on actual AUV
 - Real-time obstacle avoidance
+- Map generation in darker underwater environments
 <br>
 
 ## **Acknowledgments**
