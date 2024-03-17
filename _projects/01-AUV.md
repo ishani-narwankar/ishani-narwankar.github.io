@@ -9,6 +9,10 @@ description: ROS2 package that interfaces with ArduSub to allow an AUV to autono
 
 ![header_photo](../assets/nemo_header_photo.png)
 
+<p class="text-center">
+{% include elements/button.html link="https://github.com/ishani-narwankar/nemo_auv" text="GitHub Repo" %}
+</p>
+
 ## **Project Brief**
 In 10 weeks, I updated a low-cost underwater vehicle, ported an existing feature-based visual SLAM package into ROS2 Iron, tuned it for use in an underwater environment, and developed a ROS2 package that interfaces with ArduSub to autonomously navigate waypoints underwater.
 
@@ -93,6 +97,14 @@ The right side of the above gif presents much less unwanted noise and more clear
 <br>
 
 ## **ROS Architecture**
+Important packages:
+- **nemo_auv**: ROS2 package I wrote to manually and autonomously control the movement of the AUV. It also conducts waypoint navigation in both simulation (RVIZ) and on the real system. 
+- **ORB SLAM 2**: Existing package that allows for map generation.
+- **ros2 orbslam**: Existing package that I added to in order to get it working in ROS2 Iron.
+
+The nemo_auv package can be accessed at the github repository linked at the top of this post. This package is currently being updated to test the autonomous waypoint navigation algorithm in RVIZ simulation.
+<br>
+
 ### **Implementing ORBSLAM 2 (Feature-based SLAM) Underwater**
 In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry and depth data. The available ROS package ORB SLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
 
@@ -117,20 +129,19 @@ The two main ways to tune the system for better underwater feature detection res
 Throughout the 10 weeks, I tuned, tested, and refined my AUV and methods during and after pool tests. Once I had established a way to launch and utilize ORB SLAM 2 with my created Nemo_AUV ROS2 package, I was able to complete one of the main goals of my project: generating a map of the underwater environment using SLAM.
 
 This is the process I repeated in order to sufficiently tune my packages to work reliably for underwater map generation:
-[diagram coming soon]
-
+<p float="center">
+  <img src="../assets/testing_flow.png" width="85%" />
+</p>
 <br>
 
-### **Control**
-[coming soon]
-<br>
-
-## **Simulating Autonomous Waypoint Navigation**
+## **Simulating Autonomous Waypoint Navigation in RVIZ**
 [coming soon]
 <br>
 
 ## **Future Work**
-[coming soon]
+Ultimately I didn't have enough time to test my autonomous waypoint navigation algorithm on the actual system, but was able to tune in with the maps generated and data collected during pool tests throughout the quarter. So my future work on this project includes:
+- Autonomous waypoint navigation on actual AUV
+- Real-time obstacle avoidance
 <br>
 
 ## **Acknowledgments**
@@ -139,7 +150,7 @@ Kyle Wang, Max Palay, Courtney Smith, Megan Black, Fiona Neylon, Kassidy Shedd, 
 <br>
 
 ## **Additional Videos**
-The following video showcases the ros2 package created manual/autonomous depth mode which allows users to move around the AUV without having to manually maintain depth. This mode is used to capture rosbag data to input into ORBSLAM for map generation.
+The following video showcases the ROS2 package created manual/autonomous depth mode which allows users to move around the AUV without having to manually maintain depth. This mode is used to capture rosbag data to input into ORB SLAM 2 for map generation.
 
 <center><iframe
  width="720"
