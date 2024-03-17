@@ -1,7 +1,7 @@
 ---
 name: EKF SLAM from Scratch 
 tools: [ROS2, C++, RVIZ, Kinematics, LiDAR, Kinematics, Machine Learning]
-image: https://ishani-narwankar.github.io/assets/nusim1.png
+image: https://ishani-narwankar.github.io/assets/hw3FINAL1.png
 description: Developing a ROS2 C++ EKF SLAM package from scratch for a turtlebot3 and simulated environment.
 ---
 # EKF SLAM from Scratch for Turtlebot3

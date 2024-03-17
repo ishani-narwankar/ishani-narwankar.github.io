@@ -1,7 +1,7 @@
 ---
 name: Underwater SLAM and Waypoint Navigation with Autonomous Underwater Vehicle (AUV)
 tools: [Python, ROS2, SLAM, CMake, Pixhawk, ArduSub, Path Planning, Controls]
-image: https://ishani-narwankar.github.io/assets/AUV.jpg
+image: https://ishani-narwankar.github.io/assets/SLAM_header.gif
 description: ROS2 package that interfaces with ArduSub to allow an AUV to autonomously navigate waypoints and avoid obstacles under water.
 ---
 # Underwater SLAM and Waypoint Navigation with Autonomous Underwater Vehicle (AUV)
@@ -104,13 +104,14 @@ Important packages:
 
 The nemo_auv package can be accessed at the github repository linked at the top of this post. This package is currently being updated to test the autonomous waypoint navigation algorithm in RVIZ simulation.
 <br>
+<br>
 
-### **Implementing ORBSLAM 2 (Feature-based SLAM) Underwater**
+### **Implementing ORB SLAM 2 (Feature-based SLAM) Underwater**
 In order to localize the AUV while conducting autonomous waypoint navigation, I am generating a map using visual odometry and depth data. The available ROS package ORB SLAM 2 calculates the camera trajectory and creates a sparse 3D reconstruction for monocular cameras.
 
 ORB SLAM 2 was developed for ROS1, so I ported it into ROS2 Iron to make it compatible with my system. This required me to rewrite part of the ROS2 porting package for ORB SLAM. After porting the package into ROS2, my main task was tuning the ORB parameters and adjusting the package to work in an underwater environment.
 
-The two main ways to tune the system for better underwater feature detection results is to calibrate the camera and tune the orb parameters. The pictures below display my camera calibration process while calibrating the AUV's camera in air and underwater. I utilized MATLAB's camera calibration app in order to visualize and minimize the reprojection errors amongst various calibration photos taken. I then converted the results of these calibrations into OpenCV calibration files for the ORB SLAM 2 package to utilize during run time.
+The two main ways to tune the system for better underwater feature detection results are to calibrate the camera and tune the orb parameters. The pictures below display the camera calibration process in both the air and underwater. I utilized MATLAB's camera calibration app in order to visualize and minimize the reprojection errors amongst various calibration photos taken. I then converted the results of these calibrations into OpenCV calibration files for the ORB SLAM 2 package to utilize during run time.
 
 <center><b>Camera Calibration in Air</b></center>
 <p float="center">
