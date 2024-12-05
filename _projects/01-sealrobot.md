@@ -7,7 +7,7 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 # Seal-inspired Robotic Platform for Development and Testing of Soft Robotic Whisker Sensors
 <br>
 
-## **THIS PORTFOLIO POST IS STILL IN PROGRESS**
+## ***THIS PORTFOLIO POST IS STILL IN PROGRESS***
 
 <!-- ![header_photo](../assets/nemo_header_photo.png) -->
 
@@ -16,7 +16,7 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 </p>
 
 ## **Introduction**
--Context: importance of seal whiskers in biological sensing and how project translates these functions into robotics
+- Context: importance of seal whiskers in biological sensing and how project translates these functions into robotics
 - Objective: build a system to test and analyze soft robotic whisker sensor arrays' behavior in controlled conditions
 <br>
 <!-- project flow section here: map building -> digital waypoint -> waypoint navigation -> obstacle avoidance -->
@@ -44,6 +44,12 @@ Challenges Faced and Solutions Implemented:
 <br>
 
 ## **Seal Head and Mount Design**
+Design features:
+- Slots for swapping whisker arrays
+- Mounts to ROV frame
+- PLA 
+
+*insert CAD design next to actual photo*
 <br>
 
 ## **Seal Whisker Arrays and Sensors**
@@ -54,6 +60,8 @@ Challenges Faced and Solutions Implemented:
 
 ## **Results**
 *show the CV differences*
+*show hardware changes over time*
+*show tag clarity changes over time*
 
 ## **Lessons Learned**
 <br>
