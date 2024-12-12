@@ -7,9 +7,15 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 # Seal-inspired Robotic Platform for Development and Testing of Soft Robotic Whisker Sensors
 <br>
 
-## ***THIS PORTFOLIO POST IS STILL IN PROGRESS***
-
-<!-- ![header_photo](../assets/nemo_header_photo.png) -->
+<center><iframe
+ width="720"
+ height="576"
+ src="{{'https://youtube.com/embed/4ctWEFJlc-M?si=8hYOuG3y9vWbCVsQ' . $video}}"
+ title="YouTube video player"
+ frameborder="0"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+ allowfullscreen>
+</iframe></center>
 
 <p class="text-center">
 {% include elements/button.html link="https://github.com/ishani-narwankar/nemo_auv" text="GitHub Repo" %}
