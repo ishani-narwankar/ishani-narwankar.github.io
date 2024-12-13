@@ -7,6 +7,8 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 # Seal-inspired Robotic Platform for Development and Testing of Soft Robotic Whisker Sensors
 <br>
 
+## **Project Demo**
+
 <center><iframe
  width="720"
  height="576"
@@ -18,7 +20,7 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 </iframe></center>
 
 <p class="text-center">
-{% include elements/button.html link="https://github.com/ishani-narwankar/nemo_auv" text="GitHub Repo" %}
+{% include elements/button.html link="https://github.com/ishani-narwankar/Sealbot" text="GitHub Repo" %}
 </p>
 
 ## **Introduction**
@@ -29,6 +31,7 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 
 ## **Project Overview**
 - Timeline: 20 week project duration
+- Objective: Build a system to test and analyze soft robotic whisker sensor array's behavior in controlled conditions
 - Key Deliverables:
     - Refurbished ROV platform
     - Custom-designed seal head and whisker mounts
@@ -36,7 +39,7 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
     - 3D pose tracking software library
 <br>
 
-## **ROV Hardware Maintenance**
+## **ROV Hardware and Electronics Maintenance**
 Tasks Completed: 
 - Fixing frame and replacing damaged components
 - Upgrading motors and ESCs
@@ -47,6 +50,8 @@ Challenges Faced and Solutions Implemented:
     - Replaced with new motor
 - Water leaking into electronics chamber
     - Replaced cable valves and sealed with marine sealant
+
+![hardware_upgrades](../assets/nemo.jpg)
 <br>
 
 ## **Seal Head and Mount Design**
@@ -55,7 +60,12 @@ Design features:
 - Mounts to ROV frame
 - PLA 
 
-*insert CAD design next to actual photo*
+**CAD of seal head design**
+![seal head CAD](../assets/sealheadCAD.png)
+
+**PLA 3D printed seal head**
+![printed seal head](../assets/printedsealhead.jpg)
+
 <br>
 
 ## **Seal Whisker Arrays and Sensors**
