@@ -1,7 +1,7 @@
 ---
 name: Seal-inspired Robotic Platform for Development and Testing of Soft Robotic Whisker Sensors
 tools: [Python, ROS2, OpenCV, Pixhawk, ArduSub, Controls, Bioinspiration, Soft Robotics, Computer Vision, Rapid Prototyping]
-image: 
+image: https://ishani-narwankar.github.io/assets/sealheader.jpg
 description: Robotic platform for seal whisker sensor testing and ROS2 package that tracks and evaluates the 3D pose change of whisker sensors over time.
 ---
 # Seal-inspired Robotic Platform for Development and Testing of Soft Robotic Whisker Sensors
