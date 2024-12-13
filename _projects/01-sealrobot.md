@@ -7,14 +7,10 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 # Seal-inspired Robotic Platform for Development and Testing of Soft Robotic Whisker Sensors
 <br>
 
-<p class="text-center">
-{% include elements/button.html link="https://github.com/ishani-narwankar/Sealbot" text="GitHub Repo" %}
-</p>
-
 ## **Project Demo**
 
 <center><iframe
- width="720"
+ width="920"
  height="576"
  src="{{'https://youtube.com/embed/4ctWEFJlc-M?si=8hYOuG3y9vWbCVsQ' . $video}}"
  title="YouTube video player"
@@ -22,6 +18,10 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
  allowfullscreen>
 </iframe></center>
+
+<p class="text-center">
+{% include elements/button.html link="https://github.com/ishani-narwankar/Sealbot" text="GitHub Repo" %}
+</p>
 
 ## **Introduction**
 - *Context*: importance of seal whiskers in biological sensing and how project translates these functions into robotics
@@ -84,8 +84,6 @@ Design features:
 *show the CV differences*
 *show hardware changes over time*
 *show tag clarity changes over time*
-
-## **Lessons Learned**
 <br>
 
 ## **Conclusion and Future Work**
