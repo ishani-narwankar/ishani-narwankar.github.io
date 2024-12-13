@@ -1,5 +1,5 @@
 ---
-name: 
+name: Artificial Life - Simulating an Evolutionary Algorithm
 tools: [MuJoCo, Python, XML, Evolutionary Algorithms, Dynamic Generation]
 image: 
 description: Dynamically generating and evolving a simulated organism based on fitness.
