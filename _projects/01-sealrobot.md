@@ -24,15 +24,15 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 </p>
 
 ## **Introduction**
-- Context: importance of seal whiskers in biological sensing and how project translates these functions into robotics
-- Objective: build a system to test and analyze soft robotic whisker sensor arrays' behavior in controlled conditions
+- *Context*: importance of seal whiskers in biological sensing and how project translates these functions into robotics
+- *Objective*: build a system to test and analyze soft robotic whisker sensor arrays' behavior in controlled conditions
 <br>
 <!-- project flow section here: map building -> digital waypoint -> waypoint navigation -> obstacle avoidance -->
 
 ## **Project Overview**
-- Timeline: 20 week project duration
-- Objective: Build a system to test and analyze soft robotic whisker sensor array's behavior in controlled conditions
-- Key Deliverables:
+- *Timeline*: 20 week project duration
+- *Objective*: Build a system to test and analyze soft robotic whisker sensor array's behavior in controlled conditions
+- *Key Deliverables*:
     - Refurbished ROV platform
     - Custom-designed seal head and whisker mounts
     - Test whisker arrays embedded with sensors
@@ -51,7 +51,11 @@ Challenges Faced and Solutions Implemented:
 - Water leaking into electronics chamber
     - Replaced cable valves and sealed with marine sealant
 
-![hardware_upgrades](../assets/nemo.jpg)
+<p float="center">
+  <img src="../assets/nemo.jpg" width="49%" />
+</p>
+<br>
+<br>
 <br>
 
 ## **Seal Head and Mount Design**
@@ -61,10 +65,19 @@ Design features:
 - PLA 
 
 **CAD of seal head design**
-![seal head CAD](../assets/sealheadCAD.png)
+<p float="center">
+  <img src="../assets/sealheadCAD.png" width="49%" />
+</p>
+<br>
+<br>
+
 
 **PLA 3D printed seal head**
-![printed seal head](../assets/printedsealhead.jpg)
+<p float="center">
+  <img src="../assets/printedsealhead.jpg" width="49%" />
+</p>
+<br>
+<br>
 
 <br>
 
