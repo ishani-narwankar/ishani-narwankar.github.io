@@ -100,10 +100,17 @@ The 3D pose tracking software library was inspired and developed off of the exis
 {% include elements/button.html link="https://github.com/Tinker-Twins/AprilTag" text="Reference GitHub Repo" %}
 </p>
 
+The development of these scripts was carried through by numerous tests changing various OpenCV photo params in order to make the april tags more clear in the ROV camera.
+
+<p float="center">
+  <img src="../assets/tagclarity.png" height="49%" />
+</p>
+
 The process of configuring and converting this repo into a working 3D pose tracker for the seal whisker sensors was as follows:
 <p float="center">
   <img src="../assets/whiskerposeprocess.png" height="49%" />
 </p>
+
 
 <!-- ## **Results**
 *show the CV differences*
@@ -111,10 +118,15 @@ The process of configuring and converting this repo into a working 3D pose track
 *show tag clarity changes over time*
 <br> -->
 
-<!-- ## **Conclusion and Future Work**
-<br>
+## **Future Work**
 
-## **Gallery**
+At the current stage, I am able to accurately track the 3D pose of the whisker sensors underwater. I am currently working with the SeNSE lab to now convert the gathered 3D pose data into the ROV's self-speed.
+
+Another application of these whisker sensors that the SeNSE group and I are currently working towards is the detection of external disturbances. 
+
+Using data that I gathered throughout this project, we hope to achieve these future goals.
+
+<!-- ## **Gallery**
 <br> -->
 
 <!-- ## **References and Resources**
