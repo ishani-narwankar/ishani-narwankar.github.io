@@ -23,9 +23,10 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 {% include elements/button.html link="https://github.com/ishani-narwankar/Sealbot" text="GitHub Repo" %}
 </p>
 
-## **Introduction**
-- *Context*: importance of seal whiskers in biological sensing and how project translates these functions into robotics
-- *Objective*: build a system to test and analyze soft robotic whisker sensor arrays' behavior in controlled conditions
+## **Project Flow**
+<p float="center">
+  <img src="../assets/SealProjectFlow.png" width="61%" />
+</p>
 <br>
 <!-- project flow section here: map building -> digital waypoint -> waypoint navigation -> obstacle avoidance -->
 
@@ -57,10 +58,7 @@ Challenges Faced and Solutions Implemented:
 <br>
 
 ## **Seal Head and Mount Design**
-Design features:
-- Slots for swapping whisker arrays
-- Mounts to ROV frame
-- PLA 
+The main design features for the seal head are slots for whisker arrays to be swapped and mounting holes for the seal head. Since the head is printed using PLA, I was able to test a few different design iterations before landing on the one shown below.
 
 **CAD of seal head design**
 <p float="center">
@@ -76,24 +74,57 @@ Design features:
 
 ## **Seal Whisker Arrays and Sensors**
 <br>
+This entire seal robot platform was developed in order to test and develop the seal whisker sensors. 
+
+These sensors are composed of three basic components: piano wire, dragon skin (silicone rubber), and april tags. 
+
+A lot of time was spent determining the right way to go about manufacturing a whisker sensor array in a way that ensures that each sensor is isolated from the others near it.
+
+The following whisker array test stand was devised to determine how small the april tags on the sensors could be and find a practical design solution to isolating each sensor within the array:
+
+**Whisker Sensor Array Test Stand**
+<p float="center">
+  <img src="../assets/arraystand.gif" height="49%" />
+</p>
+
+This gif demonstrates how when one whisker moves, the connected tag on the back will also move. 
+
+Designing, manufacturing, and developing the whisker sensors was a full length process that included molding and curing dragonskin silicone, waterproofing 10x10mm april tags, and configuring the mirror inside of the seal head in such a way that the april tags from both left and right whisker arrays were clearly visible in the ROV camera.
+
+![whisker_upgrades](../assets/whiskerarraydev.png)
+
 
 ## **3D Pose Tracking Software Library**
-<br>
+The 3D pose tracking software library was inspired and developed off of the existing april tag 3D pose tracking library found here:
+<p class="text-center">
+{% include elements/button.html link="https://github.com/Tinker-Twins/AprilTag" text="Reference GitHub Repo" %}
+</p>
 
-## **Results**
+The process of configuring and converting this repo into a working 3D pose tracker for the seal whisker sensors was as follows:
+<p float="center">
+  <img src="../assets/whiskerposeprocess.png" height="49%" />
+</p>
+
+<!-- ## **Results**
 *show the CV differences*
 *show hardware changes over time*
 *show tag clarity changes over time*
-<br>
+<br> -->
 
-## **Conclusion and Future Work**
+<!-- ## **Conclusion and Future Work**
 <br>
 
 ## **Gallery**
-<br>
+<br> -->
 
-## **References and Resources**
+<!-- ## **References and Resources**
 - Tools, software, and libraries used
-- Acknowledgements
+- Acknowledgements -->
+
+## **Acknowledgements**
+The AUV project was my own individual project, but I would like to thank the following people helped me with pool test setups at the Northwestern's Pool:
+Kyle Wang and Benny Zhang. 
+
+I would also like to thank Dr. Mitra Hartmann and the members of SeNSE lab for their advice and guidance throughout my project.
 
 
