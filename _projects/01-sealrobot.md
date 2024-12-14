@@ -25,7 +25,7 @@ description: Robotic platform for seal whisker sensor testing and ROS2 package t
 
 ## **Project Flow**
 <p float="center">
-  <img src="../assets/SealProjectFlow.png" width="61%" />
+  <img src="../assets/SealProjectFlow.png" width="100%" />
 </p>
 <br>
 <!-- project flow section here: map building -> digital waypoint -> waypoint navigation -> obstacle avoidance -->
